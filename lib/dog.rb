@@ -57,6 +57,7 @@ class Dog
     if dog 
       pup = self.new_from_db(dog)
     else
+      new_dog_hash = {:name => name, :breed => breed}
       self.create()
     end
   end
