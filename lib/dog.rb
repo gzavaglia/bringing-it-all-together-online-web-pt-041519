@@ -58,8 +58,9 @@ class Dog
       pup = self.new_from_db(dog)
     else
       new_dog_hash = {:name => name, :breed => breed}
-      self.create()
+      pup = self.create(new_dog_hash)
     end
+    pup
   end
     
   def self.new_from_db(row)
